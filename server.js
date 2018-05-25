@@ -10,7 +10,7 @@ app.use(express.static(DIST_DIR));
 app.use('/src', express.static(__dirname + '/src/'));
 //Send index.html when the user access the web
 app.get("/", function (req, res) {
-  res.render(path.join(DIST_DIR, "index.html"));
+  res.sendFile(path.join(DIST_DIR, "index.html"));
 });
 
 app.post("/upload", function (req, res) {
