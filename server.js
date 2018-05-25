@@ -7,11 +7,17 @@ const DIST_DIR = path.join(__dirname, "dist"),
 
 //Serving the files on the dist folder
 app.use(express.static(DIST_DIR));
-
+app.use('/src', express.static(__dirname + '/src/'));
 //Send index.html when the user access the web
 app.get("/", function (req, res) {
-  res.sendFile(path.join(DIST_DIR, "index.html"));
+  res.render(path.join(DIST_DIR, "index.html"));
 });
+
+app.post("/upload", function (req, res) {
+  res.sendStatus(200);
+  console.log(req.body);
+});
+
 //Start the server
 app.listen(PORT, () => {
   console.log(`server started on ${PORT}`);

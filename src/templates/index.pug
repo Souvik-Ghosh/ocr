@@ -1,8 +1,24 @@
-doctype html
 html
   head
     meta(charset='UTF-8')
-    title Index Page
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
   body
-    div.content
-      h2 Webpack-Express-Pug-Sass Boilerplate
+  .grid-container
+    .header
+      h2 header
+    .main
+      .left
+        .container
+          .preview
+            img#_img(src='../images/logo.png')
+          .select-image
+            input#imgInp(type='file', name='imgToUpload' hidden)
+            button#_upload Choose
+      .right
+        .container
+          textarea#textBox
+    .footer
+      h2 footer
+
+        
