@@ -9,8 +9,7 @@ module.exports = {
     inline: true,
   },
   entry: {
-    index: './src/index.js',
-    upload: './src/upload.js'
+    index: './src/index.js'
   },
   mode: "development",
   output: {
@@ -49,11 +48,6 @@ module.exports = {
       template: './src/templates/index.pug',
       filename: 'index.html',
       chunks: ['index']
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/upload.pug',
-      filename: 'upload.html',
-      chunks: ['upload']
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
