@@ -6,7 +6,7 @@ html
   body
   .grid-container
     .header
-      h2 header
+      h2 OCR & Translator
     .main
       .left
         .container
@@ -14,11 +14,15 @@ html
             img#_img(src='../images/logo.png')
           .select-image
             input#imgInp(type='file', name='imgToUpload' hidden)
-            button#_upload Choose
+            div#_upload Choose
       .right
-        .container
-          textarea#textBox
+        .container#right-container
+          .textarea
+            textarea#textBox
+        .textarea-buttons
+            button abc
+            button def
     .footer
-      h2 footer
+      Copyright Copyright &copy; 2018 Souvik Ghosh
 
         
