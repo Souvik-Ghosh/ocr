@@ -55,13 +55,12 @@ app.get("/", function (req, res) {
 });
 
 app.put("/upload", function (req, res) {
-  // getStuff(req.files.img.data)
-  //   .then(data => res.send({"data": data.responses[0].fullTextAnnotation.text}))
-  //   .catch(err => res.send(err));
-  //console.log(req.files.img.data);
-  setTimeout(() => {
-    res.send({"data": "hi"})
-  }, 3000);
+  getStuff(req.files.img.data)
+    .then(data => res.send({"data": data.responses[0].fullTextAnnotation.text}))
+    .catch(err => res.send(err));
+  // setTimeout(() => {
+  //   res.send({"data": "hi"})
+  // }, 5000);
 });
 
 //Start the server

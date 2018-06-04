@@ -143,10 +143,12 @@ background: linear-gradient(to top, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Fir
   user-select:none;
   -o-user-select:none;
   border-radius: 2px;
+  box-shadow: 1px 1px 2px 0.5px #4f804f;
 }
 
 #_upload:active {
   border: none;
+  box-shadow: none;
 }
 
 #_upload:hover {
@@ -210,8 +212,6 @@ background: linear-gradient(to top, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Fir
 .textarea-buttons {
   position: absolute;
   display: grid;
-  grid-row-gap: 2px;
-
 }
 .textarea {
   width: -webkit-fill-available;
@@ -254,4 +254,17 @@ background: linear-gradient(to top, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Fir
 }
 #textBox::-moz-selection {
   background: #a8d1ff;
+}
+
+//icons////
+.icon-small {
+  height: 40px;
+  width: 25px;
+  margin-right: 5px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.icon-small:active {
+  opacity: 0.8;
 }
