@@ -5,9 +5,9 @@ const path = require("path"),
       fs = require('fs'),
       util = require('util');
 
-const DIST_DIR = path.join(__dirname, "dist"),
-      PORT = 3000 || process.env.PORT,
-      app = express();
+const DIST_DIR = path.join(__dirname, "dist");
+const PORT = process.env.PORT;
+const app = express();
 
 app.use(fileUpload());
 
